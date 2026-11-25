@@ -217,7 +217,7 @@ class TestSerDe:
         monkeypatch.setenv("ENV_VAR", "test-api-key")
         component = OpenAIResponsesChatGenerator(
             api_key=Secret.from_env_var("ENV_VAR"),
-            model="gpt-5-mini",
+            model="gpt-6.1-terra",
             streaming_callback=print_streaming_chunk,
             api_base_url="test-base-url",
             generation_kwargs={"max_tokens": 10, "some_test_param": "test-params", "text_format": calendar_event_model},
@@ -233,7 +233,7 @@ class TestSerDe:
             "type": "haystack.components.generators.chat.openai_responses.OpenAIResponsesChatGenerator",
             "init_parameters": {
                 "api_key": {"env_vars": ["ENV_VAR"], "strict": True, "type": "env_var"},
-                "model": "gpt-5-mini",
+                "model": "gpt-6.1-terra",
                 "organization": None,
                 "api_base_url": "test-base-url",
                 "max_retries": 10,
@@ -289,7 +289,7 @@ class TestSerDe:
             "type": "haystack.components.generators.chat.openai_responses.OpenAIResponsesChatGenerator",
             "init_parameters": {
                 "api_key": {"env_vars": ["OPENAI_API_KEY"], "strict": True, "type": "env_var"},
-                "model": "gpt-5-mini",
+                "model": "gpt-6.1-terra",
                 "api_base_url": "test-base-url",
                 "streaming_callback": "haystack.components.generators.utils.print_streaming_chunk",
                 "max_retries": 10,
@@ -334,7 +334,7 @@ class TestSerDe:
             "type": "haystack.components.generators.chat.openai_responses.OpenAIResponsesChatGenerator",
             "init_parameters": {
                 "api_key": {"env_vars": ["OPENAI_API_KEY"], "strict": True, "type": "env_var"},
-                "model": "gpt-5-mini",
+                "model": "gpt-6.1-terra",
                 "organization": None,
                 "api_base_url": "test-base-url",
                 "streaming_callback": "haystack.components.generators.utils.print_streaming_chunk",

@@ -134,7 +134,7 @@ def mock_parsed_chat_completion():
     with patch("openai.resources.chat.completions.Completions.parse") as mock_chat_completion_parse:
         completion = ParsedChatCompletion[CalendarEvent](
             id="json_foo",
-            model="gpt-5-mini",
+            model="gpt-6.1-terra",
             object="chat.completion",
             choices=[
                 ParsedChoice[CalendarEvent](
@@ -410,7 +410,7 @@ class TestOpenAIChatGenerator:
             "type": "haystack.components.generators.chat.openai.OpenAIChatGenerator",
             "init_parameters": {
                 "api_key": {"env_vars": ["OPENAI_API_KEY"], "strict": True, "type": "env_var"},
-                "model": "gpt-5-mini",
+                "model": "gpt-6.1-terra",
                 "api_base_url": "test-base-url",
                 "streaming_callback": "haystack.components.generators.utils.print_streaming_chunk",
                 "max_retries": 10,
@@ -1791,7 +1791,7 @@ def streaming_chunks():
             finish_reason="tool_calls",
         ),
         StreamingChunk(
-            content="", meta={"model": "gpt-5-mini", "received_at": ANY, "usage": STREAMED_USAGE.model_dump()}
+            content="", meta={"model": "gpt-6.1-terra", "received_at": ANY, "usage": STREAMED_USAGE.model_dump()}
         ),
     ]
 

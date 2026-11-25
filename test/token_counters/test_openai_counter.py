@@ -73,7 +73,7 @@ class TestOpenAITokenCounter:
         result = counter.count(messages, tools=[search])
         assert result == 42
         client.responses.input_tokens.count.assert_called_once_with(
-            model="gpt-5-mini",
+            model="gpt-6.1-terra",
             input=[
                 {"role": "system", "content": "Be concise."},
                 {
@@ -110,7 +110,7 @@ class TestOpenAITokenCounter:
         assert data == {
             "type": "haystack.token_counters.openai_counter.OpenAITokenCounter",
             "init_parameters": {
-                "model": "gpt-5-mini",
+                "model": "gpt-6.1-terra",
                 "api_key": {"type": "env_var", "env_vars": ["CUSTOM_OPENAI_API_KEY"], "strict": True},
                 "api_base_url": "https://example.com/v1",
                 "organization": "org-test",
