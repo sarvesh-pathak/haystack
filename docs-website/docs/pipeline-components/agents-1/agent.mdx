@@ -462,7 +462,7 @@ def fetch_image(
 
 
 agent = Agent(
-    chat_generator=OpenAIResponsesChatGenerator(model="gpt-5"),
+    chat_generator=OpenAIResponsesChatGenerator(model="gpt-6.1-sol"),
     tools=[fetch_image],
     system_prompt="You are a helpful assistant that can fetch and analyze images from URLs.",
 )
@@ -498,7 +498,7 @@ template = """
 """
 
 agent = Agent(
-    chat_generator=OpenAIChatGenerator(model="gpt-5"),
+    chat_generator=OpenAIChatGenerator(model="gpt-6.1-sol"),
     system_prompt="You are a helpful assistant that can analyze images.",
 )
 prompt_builder = ChatPromptBuilder(
