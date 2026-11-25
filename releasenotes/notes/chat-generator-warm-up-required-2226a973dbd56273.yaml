@@ -12,12 +12,12 @@ upgrade:
     .. code-block:: python
 
         # Agent with tools
-        agent = Agent(llm=OpenAIChatGenerator(model="gpt-4"), tools=[my_tool])
+        agent = Agent(llm=OpenAIChatGenerator(model="gpt-5.6-sol"), tools=[my_tool])
         agent.warm_up()  # Required in standalone mode
         result = agent.run(messages=[ChatMessage.from_user("Hello")])
 
         # LLMMessagesRouter with tools
-        router = LLMMessagesRouter(generator=OpenAIChatGenerator(model="gpt-4"), tools=[my_tool])
+        router = LLMMessagesRouter(generator=OpenAIChatGenerator(model="gpt-5.6-sol"), tools=[my_tool])
         router.warm_up()  # Required in standalone mode
         result = router.run(messages=[ChatMessage.from_user("Hello")])
 

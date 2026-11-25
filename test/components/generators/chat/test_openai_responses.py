@@ -540,7 +540,7 @@ class TestRun:
         monkeypatch.setenv("OPENAI_API_KEY", "test-api-key")
         chat_messages = [ChatMessage.from_user("What's the capital of France")]
         component = OpenAIResponsesChatGenerator(
-            model="gpt-4", generation_kwargs={"include": ["message.output_text.logprobs"]}
+            model="gpt-5.6-sol", generation_kwargs={"include": ["message.output_text.logprobs"]}
         )
         results = component.run(chat_messages)
         assert len(results["replies"]) == 1

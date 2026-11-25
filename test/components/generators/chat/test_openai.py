@@ -456,7 +456,7 @@ class TestOpenAIChatGenerator:
             "type": "haystack.components.generators.chat.openai.OpenAIChatGenerator",
             "init_parameters": {
                 "api_key": {"env_vars": ["OPENAI_API_KEY"], "strict": True, "type": "env_var"},
-                "model": "gpt-4",
+                "model": "gpt-5.6-sol",
                 "organization": None,
                 "api_base_url": "test-base-url",
                 "streaming_callback": "haystack.components.generators.utils.print_streaming_chunk",
@@ -798,7 +798,7 @@ class TestOpenAIChatGenerator:
         with patch("openai.resources.chat.completions.Completions.parse") as mock_chat_completion_parse:
             completion = ParsedChatCompletion[CalendarEvent](
                 id="foo",
-                model="gpt-4",
+                model="gpt-5.6-sol",
                 object="chat.completion",
                 choices=[
                     ParsedChoice[CalendarEvent](

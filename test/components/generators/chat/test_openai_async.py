@@ -470,7 +470,7 @@ class TestOpenAIChatGeneratorAsync:
                             logprobs=None,
                         )
                     ],
-                    model="gpt-4",
+                    model="gpt-5.6-sol",
                     usage=None,
                 )
                 await asyncio.sleep(0.005)  # delay between chunks

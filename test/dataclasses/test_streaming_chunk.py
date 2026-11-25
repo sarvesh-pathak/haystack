@@ -122,7 +122,7 @@ class TestStreamingChunk:
     def test_create_chunk_with_finish_reason_and_meta(self):
         """Test creating a chunk with both finish_reason field and meta."""
         chunk = StreamingChunk(
-            content="Test content", finish_reason="stop", meta={"model": "gpt-4", "usage": {"tokens": 10}}
+            content="Test content", finish_reason="stop", meta={"model": "gpt-5.6-sol", "usage": {"tokens": 10}}
         )
 
         assert chunk.content == "Test content"
