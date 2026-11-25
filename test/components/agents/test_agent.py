@@ -442,7 +442,7 @@ class TestAgentSerialization:
         assert serialized_agent == expected_structure
 
     def test_from_dict(self, monkeypatch):
-        model = "gpt-5"
+        model = "gpt-6.1-sol"
         monkeypatch.setenv("OPENAI_API_KEY", "fake-key")
         data = {
             "type": "haystack.components.agents.agent.Agent",

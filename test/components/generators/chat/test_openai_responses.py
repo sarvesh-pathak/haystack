@@ -1021,7 +1021,7 @@ class TestIntegration:
         """
         chat_messages = [ChatMessage.from_user("What was a positive news story from today?")]
         component = OpenAIResponsesChatGenerator(
-            model="gpt-5",
+            model="gpt-6.1-sol",
             tools=[
                 {"type": "web_search_preview"},
                 {
