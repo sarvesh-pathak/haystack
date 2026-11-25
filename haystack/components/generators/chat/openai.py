@@ -120,6 +120,7 @@ class OpenAIChatGenerator:
         "gpt-5",
         "gpt-5-pro",
         "gpt-5-mini",
+        "gpt-6.1-terra",
         "gpt-5-nano",
         "gpt-4.1",
         "gpt-4.1-mini",

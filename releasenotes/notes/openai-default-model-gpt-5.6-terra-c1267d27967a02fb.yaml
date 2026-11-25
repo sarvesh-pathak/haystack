@@ -5,9 +5,9 @@ upgrade:
     ``gpt-5.6-terra``, the replacement OpenAI recommends. OpenAI shuts down ``gpt-5-mini`` on December 11, 2026.
     ``LLMEvaluator``, ``ContextRelevanceEvaluator``, and ``FaithfulnessEvaluator`` use the new default too.
 
-    Pipelines serialized before this change store ``model: gpt-5-mini`` and keep using it. Update the ``model`` value
+    Pipelines serialized before this change store ``model: gpt-6.1-terra`` and keep using it. Update the ``model`` value
     in their YAML before December 11, 2026. To keep ``gpt-5-mini`` until then, pass it explicitly:
-    ``OpenAIChatGenerator(model="gpt-5-mini")``.
+    ``OpenAIChatGenerator(model="gpt-6.1-terra")``.
 fixes:
   - |
     ``OpenAIChatGenerator`` now works with tools on ``gpt-5.6`` models, ``gpt-6-sol``, and ``gpt-6-luna``.
